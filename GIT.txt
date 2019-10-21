@@ -1,0 +1,68 @@
+OPERACIONES BASICAS CON GIT:
+
+	- CREAR UN REPOSITORIO:
+	  	1. CREAS UNA CARPETA EN LOCAL
+		2. git init	(DENTRO DE ESA CARPETA) 
+	
+	- AÑADIR ARCHIVOS AL REPOSITORIO
+		1. git add nombre_archivo 	(DENTRO DE LA CARPETA)
+		2. git commit -m "comentario_cambio"
+	
+	- COMPROBAR ESTADO DEL REPOSITORIO
+		1. git status
+
+	- ACTUALIZAR UN ARCHIVO
+		1. git add nombre_archivo
+		2. git commit -m "comentario_cambio"
+		
+	- ACTUALIZAR TODOS LOS ARCHIVOS EN UNA CARPETA
+		1. git add .
+	
+	- VER LOG DE CAMBIOS
+		1. git log
+		2. git log --pretty=format: '%h %ad | %s%d [%an]' --graph --date=short		
+		(LUGARES DE MASTER Y HEAD)
+		
+	- CREAR UN ALIAS:
+	  ESTO NOS PERMITE DARLE UN NOMBRE A UNA INSTRUCCION DEMASIADO LARGA. 
+	  DE ESTA MANERA, PARA VER LOS LUGARES DE MASTER Y HEAD:		
+		- EN .gitconfig	(SITUADA EN $HOME):
+			1. hist = log --pretty=format: '%h %ad | %s%d [%an]' --graph --date=short
+			2. git hist
+
+	- RECUPERAR UNA VERSION ANTERIOR
+		1. git checkout nombre_version	(p.ej. git checkout el9f2c2l)
+
+	- VOLVER A LA ULTIMA VERSION DE LA RAMA MASTER
+		1. git checkout nombre_rama	(p.ej. git checkout master)
+	
+	- ETIQUETAR VERSIONES
+	  ES MUY UTIL PARA RECUPERAR VERSIONES
+		1. git tag nombre_etiqueta		(DA UN NOMBRE LA VERSION)
+		2. git checkout nombre_etiqueta 	(RECUPERAS LA VERSION)	
+		3. git tag 				(MUESTRA TODOS LOS TAG)
+		4. git tag -d nombre_etiqueta		(BORRA LA ETIQUETA)
+
+	- VISUALIZAR CAMBIOS
+		1. git diff 			(TODOS LOS CAMBIOS ANTES DE ACTUALIZAR)
+		2. git diff nombre_version	(CAMBIOS ENTRE LA VERSION PROPORCIONADA Y EL ESTADO ACTUAL)
+		3. git diff v1 v2		(COMPARA LA VERSION v1 Y LA v2)
+
+	- MOVER ARCHIVOS A OTROS DIRECTORIOS
+		1. git mv nombre_archivo nombre_directorio
+
+	- BORRAR ARCHIVOS
+		1. git rm nombre_archivo
+
+	- DESCARGAR REPOSITORIOS
+		1. git clone /ruta/repositorio/local
+	
+	- ACTUALIZAR LOS CAMBIOS DEL REPOSITORIO LOCAL AL REMOTO
+		1. git push
+
+	- ACTUALIZAR LOS CAMBIOS DEL REPOSITORIO REMOTO AL LOCAL
+		1. git pull
+		
+
+	  
+		
